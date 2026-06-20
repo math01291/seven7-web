@@ -191,13 +191,31 @@
         </div>
     </footer>
 
-    <!-- 임시 작동용 스크립트 (EmailJS 연동 전 경고창 방지) -->
+    <!-- 실제 작동용 EmailJS 스크립트 -->
     <script>
+        // 1. 여기에 복사한 Public Key를 넣으세요
+        emailjs.init("YOUR_PUBLIC_KEY"); 
+
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('코드가 정상 작동 중입니다! 나중에 5단계에서 EmailJS를 연결하면 대표님 메일로 직접 전송됩니다.');
-            this.reset();
+
+            // 버튼 비활성화 (여러 번 누르는 것 방지)
+            const btn = this.querySelector('button');
+            btn.disabled = true;
+            btn.innerText = '제출 중...';
+
+            // 2. 여기에 Service ID와 Template ID를 순서대로 넣으세요
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('상담 신청이 성공적으로 접수되었습니다. 담당 브로커가 신속히 연락드리겠습니다!');
+                    document.getElementById('contact-form').reset();
+                    btn.disabled = false;
+                    btn.innerText = '상담 신청서 제출하기';
+                }, function(error) {
+                    alert('전송에 실패했습니다. 다시 시도해 주시거나 대표번호로 연락 바랍니다.');
+                    console.log('FAILED...', error);
+                    btn.disabled = false;
+                    btn.innerText = '상담 신청서 제출하기';
+                });
         });
     </script>
-</body>
-</html>
