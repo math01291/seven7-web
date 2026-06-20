@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성수동 상가·사무실·빌딩 전문 | 세븐7공인중개사사무소</title>
+    <!-- Tailwind CSS (디자인 라이브러리) 디자인을 깔끔하게 만들어줍니다 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- 폰트 고딕체 설정 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- EmailJS 라이브러리 (문의폼 연동용) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 scroll-smooth">
+
+    <!-- 1. 헤더 영역 -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 text-white backdrop-blur-md border-b border-slate-800 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-wider text-amber-400">세븐7</span>
+                <span class="text-lg font-medium text-slate-300 hidden sm:inline">공인중개사사무소</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium text-slate-300">
+                <a href="#" class="hover:text-amber-400 transition">홈</a>
+                <a href="#services" class="hover:text-amber-400 transition">전문 분야</a>
+                <a href="#process" class="hover:text-amber-400 transition">중개 프로세스</a>
+                <a href="#location" class="hover:text-amber-400 transition">오시는 길</a>
+            </nav>
+            <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition text-sm shadow-md">
+                상담 신청
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. 메인 비주얼 (Hero Section) -->
+    <section class="relative bg-slate-950 text-white py-32 md:py-48 flex items-center overflow-hidden">
+        <!-- 배경 그래픽 효과 -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.08)_0,transparent_60%)]"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/20 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide mb-6">
+                Seongsu-dong Premium Real Estate
+            </span>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
+                성수동 상가 · 사무실 · 빌딩 전문<br class="hidden sm:inline">
+                <span class="text-amber-400">세븐7공인중개사사무소</span>
+            </h1>
+            <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
+                지식산업센터부터 고가 통빌딩 매매까지,<br class="sm:hidden"> 
+                성수동 최고의 비즈니스 파트너가 되어 드립니다.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl transition text-base shadow-lg shadow-amber-500/10">
+                    실시간 매물 상담 받기
+                </a>
+                <a href="#location" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-8 py-4 rounded-xl transition text-base">
+                    오시는 길 안내
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 핵심 전문 분야 -->
+    <section id="services" class="py-24 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">성수동 핵심 전문 분야</h2>
+            <p class="text-slate-500">세븐7공인중개사는 성수동 권역의 트렌드와 자산 가치를 완벽히 분석합니다.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- 카드 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-600 font-bold text-xl mb-6">01</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">상가 및 리테일</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">성수동 팝업스토어 상권, 무인 점포, 메인 스트리트 상권 유동인구 및 권리금·임대차 분석 솔루션을 제공합니다.</p>
+            </div>
+            <!-- 카드 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-600 font-bold text-xl mb-6">02</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">오피스 & 지식산업센터</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">IT 대기업, 지식산업센터, 스타트업 및 공유 창고 등 기업 규모와 비즈니스 특성에 딱 맞는 최적의 사무 공간을 매칭합니다.</p>
+            </div>
+            <!-- 카드 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-600 font-bold text-xl mb-6">03</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">빌딩 매매 & 신축 부지</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">수백억 대 통빌딩 자산 가치 평가, 신축 및 리모델링 부지 확보, 고가 자산 중개의 고도화된 행정·법률적 리스크 분석을 대행합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 중개 서비스 프로세스 -->
+    <section id="process" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">안전하고 신속한 중개 프로세스</h2>
+                <p class="text-slate-400">첫 상담부터 계약 체결, 사후 행정 관리까지 완벽하게 책임집니다.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-2">Step 01</span>
+                    <h4 class="text-lg font-bold mb-2">매물/조건 접수</h4>
+                    <p class="text-slate-400 text-xs">고객 맞춤형 예산 및 희망 면적 설정</p>
+                </div>
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-2">Step 02</span>
+                    <h4 class="text-lg font-bold mb-2">상권·입지 분석</h4>
+                    <p class="text-slate-400 text-xs">성수 권역 빅데이터 기반 매물 분석</p>
+                </div>
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-2">Step 03</span>
+                    <h4 class="text-lg font-bold mb-2">현장 브리핑</h4>
+                    <p class="text-slate-400 text-xs">후보 매물 동행 투어 및 가치 검증</p>
+                </div>
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-2">Step 04</span>
+                    <h4 class="text-lg font-bold mb-2">계약 및 사후행정</h4>
+                    <p class="text-slate-400 text-xs">안전한 특약 작성 및 행정리스크 방어</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 고객 상담 신청 폼 -->
+    <section id="contact" class="py-24 max-w-xl mx-auto px-4">
+        <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100">
+            <h3 class="text-2xl font-bold text-slate-900 mb-2 text-center">실시간 프리미엄 상담 신청</h3>
+            <p class="text-slate-500 text-center text-sm mb-8">내용을 남겨주시면 담당 브로커가 신속히 연락드리겠습니다.</p>
+            
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">성함</label>
+                    <input type="text" name="user_name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">연락처</label>
+                    <input type="tel" name="user_phone" placeholder="010-0000-0000" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">문의 유형</label>
+                    <select name="inquiry_type" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 text-sm">
+                        <option value="상가 임대차">상가 임대차/권리금</option>
+                        <option value="사무실/지산">사무실 / 지식산업센터</option>
+                        <option value="빌딩/부지 매매">빌딩 매매 / 신축 부지</option>
+                        <option value="기타 문의">기타 문의</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">상세 문의 내용</label>
+                    <textarea name="message" rows="4" required placeholder="원하시는 평수, 예산, 업종 등을 남겨주시면 구체적인 상담이 가능합니다." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 text-sm resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition text-base shadow-md">
+                    상담 신청서 제출하기
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. 오시는 길 -->
+    <section id="location" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">오시는 길</h2>
+            <p class="text-slate-600 mb-8">현장 방문 및 대면 브리핑을 원하시면 언제든 환영합니다.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm text-left inline-block max-w-full">
+                <p class="text-slate-800 font-medium mb-2"><strong class="text-slate-900">주소:</strong> 서울특별시 성동구 아차산로 110, 성광빌딩 1층</p>
+                <p class="text-slate-600 text-sm">🏢 성수역 인근 도보 거리 / 주차 가능</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 푸터 (Footer) -->
+    <footer class="bg-slate-950 text-slate-400 py-12 text-xs md:text-sm border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-4 leading-relaxed space-y-4">
+            <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center border-b border-slate-900 pb-6 gap-4">
+                <span class="text-lg font-bold text-white tracking-wider">세븐7공인중개사사무소</span>
+                <span class="text-amber-400 font-semibold text-sm">대표번호: 02-XXXX-XXXX (추후 기재 가능)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-500">
+                <div>
+                    <p>상호명: 세븐7공인중개사사무소 | 대표자: 손호준</p>
+                    <p>중개업 등록번호: 제 11200-2020-00040호</p>
+                </div>
+                <div>
+                    <p>소재지: 서울특별시 성동구 아차산로 110, 성광빌딩 1층</p>
+                    <p>© 2026 Seven7 Realty. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 임시 작동용 스크립트 (EmailJS 연동 전 경고창 방지) -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('코드가 정상 작동 중입니다! 나중에 5단계에서 EmailJS를 연결하면 대표님 메일로 직접 전송됩니다.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
